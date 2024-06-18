@@ -60,8 +60,8 @@ namespace SimpleSqlClieentApp.SQL
             return resultTable;
         }
 
-        private bool IsSelectQuery(string query) {
-            // TODO: реализовать метод
+        private bool IsSelectQuery(string query) 
+        {
             return query.TrimStart().StartsWith("SELECT", StringComparison.OrdinalIgnoreCase);
         }
 
