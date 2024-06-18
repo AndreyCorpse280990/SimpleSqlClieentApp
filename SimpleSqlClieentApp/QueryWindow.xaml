@@ -1,0 +1,32 @@
+﻿<Window x:Class="SimpleSqlClieentApp.QueryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleSqlClieentApp"
+        mc:Ignorable="d"
+        Title="QueryWindow"
+        FontFamily="Consolas" FontSize="20"
+        Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+
+        <!-- Query -->
+        <Label Content="Query:" Margin="10" Grid.Row="0" Grid.Column="0" />
+        <TextBox x:Name="queryTextBox" Margin="10" Grid.Row="1" Grid.Column="0"
+                 TextWrapping="Wrap" AcceptsReturn="True" />
+        
+        <!-- Query Result -->
+        <Label Content="Result:" Margin="10" Grid.Row="2" Grid.Column="0" />
+        <DataGrid x:Name="resultDataGrid" Margin="10" Grid.Row="3" Grid.Column="0" />
+        
+        <!-- Button -->
+        <Button x:Name="executeButton" Content="Execute" Margin="10" Grid.Row="4" Grid.Column="0" Click="executeButton_Click" />
+    </Grid>
+</Window>

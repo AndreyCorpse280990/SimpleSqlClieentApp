@@ -1,0 +1,38 @@
+﻿<Window x:Class="SimpleSqlClieentApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleSqlClieentApp"
+        mc:Ignorable="d"
+        Title="Connection"
+        FontFamily="Consolas" FontSize="20"
+        Height="250" MinHeight="250" MaxHeight="250" 
+        Width="800" MinWidth="800" MaxWidth="800"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="25*" />
+        </Grid.ColumnDefinitions>
+        
+        <!-- MS SQL Server -->
+        <Label Content="MS SQL Server:" Margin="10" Grid.Row="0" Grid.Column="0" />
+        <TextBox x:Name="sqlServerTextBox" Margin="10" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" />
+
+        <!-- Database -->
+        <Label Content="Database:" Margin="10" Grid.Row="1" Grid.Column="0" />
+        <TextBox x:Name="databaseTextBox" Margin="10" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" />
+
+        <!-- Buttons -->
+        <Button x:Name="connectionButton" Content="Connect" Margin="10" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Click="connectionButton_Click" />
+        <Button x:Name="exitButton" Content="Exit" Margin="10" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Click="exitButton_Click" />
+    </Grid>
+</Window>
